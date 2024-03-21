@@ -5,12 +5,8 @@
       "description": "${moddescription}",
       "version": "${modversion}",
       "mcversion": "${mcversion}",
-      "url": "${url}",
-      "updateUrl": "",
-      "authorList": ${authorList},
-      "credits": ${authorList},
-      "logoFile": "${logo}",
-      "screenshots": [],
-      "dependencies": ${dependencies}
+      "authorList": ["someoneice"],
+      "credits": "someoneice",
+      "dependencies": []
     }
 ]

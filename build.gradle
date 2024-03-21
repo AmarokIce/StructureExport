@@ -100,7 +100,7 @@ dependencies {
 }
 
 def dependenciesList = []
-if (!project.modDependencies.isEmpty()) dependenciesList.add(project.modDependencies)
+// if (!project.modDependencies.isEmpty()) dependenciesList.add(project.modDependencies)
 if (project.enableUsingMysteriumLib.toBoolean()) dependenciesList.add("\"required-after:MysteriumLib\"")
 
 processResources {
@@ -110,21 +110,21 @@ processResources {
     inputs.property "modname", project.modName
     inputs.property "modid", project.modId
 
-    inputs.property "url", project.url
-    inputs.property "authorList", [project.authorList]
-    inputs.property "logo", project.logo
-    inputs.property "dependencies", dependenciesList
+    // inputs.property "url", project.url
+    // inputs.property "authorList", [project.authorList]
+    // inputs.property "logo", project.logo
+    // inputs.property "dependencies", dependenciesList
 
     filesMatching("mcmod.info") {
         expand  'modversion': project.version,
                 'mcversion': project.minecraft.version,
                 'moddescription': project.modDescription,
                 'modname': project.modName,
-                'modid': project.modId,
-                'url': project.url,
-                'authorList': [project.authorList],
-                'logo': project.logo,
-                'dependencies': dependenciesList
+                'modid': project.modId
+                // 'url': project.url,
+                // 'authorList': [project.authorList],
+                // 'logo': project.logo,
+                // 'dependencies': dependenciesList
     }
 }
 
